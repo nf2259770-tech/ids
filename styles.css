@@ -294,3 +294,10 @@ body.case-open{overflow:hidden}
   .play-mark,.caption-arrow,.contact-link i,.contact-sticker i,.header-contact span,.contact-footer>a span,.zoom-cue{font-variant-emoji:text}
 }
 
+/* Keep the small mobile ornaments clear of section labels and case actions. */
+@media(max-width:640px){
+  .decor-star--case-pink,.decor-star--case-purple{top:2%;width:22px}
+  .decor-star--case-orange{top:54%;right:5%;bottom:auto;width:24px}
+  .decor-star--vinyl,.decor-star--sabu,.decor-star--miravi{top:calc(env(safe-area-inset-top,0px) + 72px);right:5%;bottom:auto;width:22px}
+}
+
