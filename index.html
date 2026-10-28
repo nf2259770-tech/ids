@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0c0c0c" />
+  <meta name="description" content="Портфолио Никиты: дизайн, брендинг, motion и видеомонтаж." />
+  <title>Nikita — portfolio</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="site-header">
+    <a class="mini-logo" href="#top" aria-label="Nikita portfolio">N<span>.</span></a>
+    <nav aria-label="Навигация">
+      <a href="#works">WORKS</a>
+      <a href="#posters">POSTERS</a>
+      <a href="#cases">CASES</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <a class="header-contact" href="#contact">НАПИСАТЬ <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="intro-slide slide" id="top" aria-labelledby="intro-title">
+      <span class="decor decor-star decor-star--orange" aria-hidden="true">✦</span>
+      <span class="decor decor-star decor-star--purple" aria-hidden="true">✳</span>
+      <span class="decor decor-star decor-star--red" aria-hidden="true">✷</span>
+      <span class="decor decor-star decor-star--lime" aria-hidden="true">✹</span>
+      <span class="intro-orbit" aria-hidden="true"></span>
+      <div class="intro-kicker"><span>VISUAL DESIGNER</span><span>МОСКВА · ONLINE</span></div>
+      <div class="portfolio-lockup" id="intro-title" aria-label="Portfolio">
+        <span class="lockup-port">PORT</span>
+        <span class="lockup-folio"><b>f</b>olio</span>
+      </div>
+      <a class="scroll-cue" href="#profile" aria-label="Перейти к профилю"><span>↓</span></a>
+      <div class="intro-bottom"><span>DESIGN / MOTION / VIDEO</span><span>01 — 07</span></div>
+    </section>
+
+    <section class="profile-slide slide" id="profile" aria-labelledby="profile-title">
+      <span class="decor decor-star decor-star--profile-red" aria-hidden="true">✷</span>
+      <span class="decor decor-star decor-star--profile-blue" aria-hidden="true">✳</span>
+      <div class="profile-frame">
+        <div class="profile-portrait"><img src="./assets/nikita-face.png" alt="Портрет Никиты" /></div>
+        <div class="profile-content">
+          <div class="profile-name-row"><h1 id="profile-title">NIKITA</h1><span class="name-spark" aria-hidden="true">✳</span></div>
+          <div class="skill-cloud" aria-label="Направления работы">
+            <span class="skill skill-design">Design</span>
+            <span class="skill skill-motion">Motion</span>
+            <span class="skill skill-smm">SMM</span>
+            <span class="skill skill-branding">Branding</span>
+            <span class="skill skill-video">Video</span>
+            <span class="skill skill-reels">Reels</span>
+          </div>
+          <div class="profile-foot"><span>EDITING</span><span>VOICE-OVER RU/EN</span></div>
+        </div>
+      </div>
+      <div class="profile-caption"><span>02 / ПРИВЕТ, Я НИКИТА</span><span>ДИЗАЙН · МОНТАЖ · АНИМАЦИЯ</span></div>
+    </section>
+
+    <section class="works-slide slide" id="works" aria-labelledby="works-title">
+      <div class="section-line"><span>03 / ИЗБРАННОЕ</span><span>РАБОТЫ, КОТОРЫЕ МОЖНО ПОСМОТРЕТЬ</span></div>
+      <div class="section-title-row">
+        <h2 id="works-title">MY <span>WORKS</span></h2>
+        <span class="pacman" aria-hidden="true"><i></i></span>
+      </div>
+      <div class="carousel-intro">
+        <p>Крути карусель, нажимай на обложку —<br />и ролик откроется крупно со звуком.</p>
+        <div class="carousel-controls" aria-label="Управление каруселью">
+          <button class="carousel-arrow" type="button" data-direction="-1" aria-label="Предыдущие работы">←</button>
+          <span class="carousel-count"><b data-current-slide>01</b><i>/</i><span data-total-slides>11</span></span>
+          <button class="carousel-arrow" type="button" data-direction="1" aria-label="Следующие работы">→</button>
+        </div>
+      </div>
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="video-carousel" tabindex="0" aria-label="Карусель видео работ">
+          <article class="video-card" data-video-card><button class="video-cover" type="button" data-video="./assets/videos/sabu-prod.mp4" data-title="SABU — motion edit" data-poster="./assets/thumbs/sabu-prod.jpg" aria-label="Воспроизвести видео SABU"><img src="./assets/thumbs/sabu-prod.jpg" alt="" /><span class="play-mark">▶</span><span class="cover-index">01</span></button><div class="video-caption"><span><b>SABU</b><small>Motion edit</small></span><span class="caption-arrow">↗</span></div></article>
+          <article class="video-card" data-video-card><button class="video-cover" type="button" data-video="./assets/videos/rolf-event.mp4" data-title="РОЛЬФ — презентация" data-poster="./assets/thumbs/rolf-event.jpg" aria-label="Воспроизвести презентацию РОЛЬФ"><img src="./assets/thumbs/rolf-event.jpg" alt="" /><span class="play-mark">▶</span><span class="cover-index">02</span></button><div class="video-caption"><span><b>РОЛЬФ</b><small>Презентация дилерского центра</small></span><a class="caption-arrow" href="#case-vinyl" aria-label="Открыть презентацию РОЛЬФ">↗</a></div></article>
+          <article class="video-card" data-video-card><button class="video-cover" type="button" data-video="./assets/videos/davinci-full.mp4" data-title="DaVinci — полный монтаж" data-poster="./assets/thumbs/davinci-full.jpg" aria-label="Воспроизвести DaVinci — полный монтаж"><img src="./assets/thumbs/davinci-full.jpg" alt="" /><span class="play-mark">▶</span><span class="cover-index">03</span></button><div class="video-caption"><span><b>DaVinci</b><small>Полный монтаж</small></span><span class="caption-arrow">↗</span></div></article>
+          <article class="video-card" data-video-card><button class="video-cover" type="button" data-video="./assets/videos/edit-january.mp4" data-title="Wels Motion" data-poster="./assets/thumbs/edit-january.jpg" aria-label="Воспроизвести Wels Motion"><img src="./assets/thumbs/edit-january.jpg" alt="" /><span class="play-mark">▶</span><span class="cover-index">04</span></button><div class="video-caption"><span><b>WELS MOTION</b><small>Motion edit</small></span><span class="caption-arrow">↗</span></div></article>
+          <article class="video-card" data-video-card><button class="video-cover" type="button" data-video="./assets/videos/yandex-motion.mp4" data-title="Yandex Motion" data-poster="./assets/thumbs/yandex-motion.jpg" aria-label="Воспроизвести Yandex Motion"><img src="./assets/thumbs/yandex-motion.jpg" alt="" /><span class="play-mark">▶</span><span class="cover-index">05</span></button><div class="video-caption"><span><b>YANDEX MOTION</b><small>Motion study</small></span><span class="caption-arrow">↗</span></div></article>
+          <article class="video-card" data-video-card><button class="video-cover" type="button" data-video="./assets/videos/friendly-tug.mp4" data-title="Edit Friendly Thug 52" data-poster="./assets/thumbs/friendly-tug.jpg" aria-label="Воспроизвести Edit Friendly Thug 52"><img src="./assets/thumbs/friendly-tug.jpg" alt="" /><span class="play-mark">▶</span><span class="cover-index">06</span></button><div class="video-caption"><span><b>EDIT FRIENDLY THUG 52</b><small>Видео / motion</small></span><span class="caption-arrow">↗</span></div></article>
+          <article class="video-card" data-video-card><button class="video-cover" type="button" data-video="./assets/videos/advice-2026.mp4" data-title="Этот совет поможет тебе" data-poster="./assets/thumbs/advice-2026.jpg" aria-label="Воспроизвести видео про совет на 2026 год"><img src="./assets/thumbs/advice-2026.jpg" alt="" /><span class="play-mark">▶</span><span class="cover-index">07</span></button><div class="video-caption"><span><b>2026</b><small>Ролик для соцсетей</small></span><span class="caption-arrow">↗</span></div></article>
+          <article class="video-card" data-video-card><button class="video-cover" type="button" data-video="./assets/videos/miravi-01.mp4" data-title="MIRAVI — live 01" data-poster="./assets/thumbs/miravi-01.jpg" aria-label="Воспроизвести видео MIRAVI 1"><img src="./assets/thumbs/miravi-01.jpg" alt="" /><span class="play-mark">▶</span><span class="cover-index">08</span></button><div class="video-caption"><span><b>MIRAVI</b><small>Live · 01</small></span><span class="caption-arrow">↗</span></div></article>
+          <article class="video-card" data-video-card><button class="video-cover" type="button" data-video="./assets/videos/miravi-02.mp4" data-title="MIRAVI — live 02" data-poster="./assets/thumbs/miravi-02.jpg" aria-label="Воспроизвести видео MIRAVI 2"><img src="./assets/thumbs/miravi-02.jpg" alt="" /><span class="play-mark">▶</span><span class="cover-index">09</span></button><div class="video-caption"><span><b>MIRAVI</b><small>Live · 02</small></span><span class="caption-arrow">↗</span></div></article>
+          <article class="video-card" data-video-card><button class="video-cover" type="button" data-video="./assets/videos/miravi-03.mp4" data-title="MIRAVI — live 03" data-poster="./assets/thumbs/miravi-03.jpg" aria-label="Воспроизвести видео MIRAVI 3"><img src="./assets/thumbs/miravi-03.jpg" alt="" /><span class="play-mark">▶</span><span class="cover-index">10</span></button><div class="video-caption"><span><b>MIRAVI</b><small>Live · 03</small></span><span class="caption-arrow">↗</span></div></article>
+          <article class="video-card" data-video-card><button class="video-cover video-cover--vertical" type="button" data-video="./assets/videos/vinyl-russia-mobile.mp4" data-title="РОЛЬФ — Reels с мероприятия" data-poster="./assets/thumbs/vinyl-russia-mobile.jpg" aria-label="Воспроизвести вертикальный Reels РОЛЬФ"><img src="./assets/thumbs/vinyl-russia-mobile.jpg" alt="" /><span class="play-mark">▶</span><span class="cover-index">11</span></button><div class="video-caption"><span><b>РОЛЬФ</b><small>Reels с мероприятия</small></span><a class="caption-arrow" href="#case-rolf" aria-label="Открыть Reels РОЛЬФ">↗</a></div></article>
+        </div>
+      </div>
+      <div class="carousel-progress" aria-hidden="true"><span></span></div>
+    </section>
+
+    <section class="poster-slide slide" id="posters" aria-labelledby="posters-title">
+      <div class="section-line"><span>04 / ПОСТЕРЫ</span><span>НАЖМИ НА РАБОТУ, ЧТОБЫ РАССМОТРЕТЬ</span></div>
+      <h2 class="poster-title" id="posters-title">POSTERS <span>&</span> ART</h2>
+      <div class="poster-board" aria-label="Интерактивная композиция постеров и объектов">
+        <span class="poster-mote poster-mote--pink" aria-hidden="true"></span>
+        <span class="poster-mote poster-mote--yellow" aria-hidden="true"></span>
+        <span class="poster-mote poster-mote--purple" aria-hidden="true"></span>
+        <button class="poster-hotspot poster-art poster-art--soldier" style="--x:2%;--y:55%;--w:13%;--h:21%;--r:-5deg;--z:4" data-poster="./assets/user-art/green-soldier.png" data-title="Зелёная фигура"><img src="./assets/user-art/green-soldier.png" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--shirt" style="--x:48%;--y:37%;--w:21%;--h:30%;--r:-4deg;--z:5" data-poster="./assets/user-art/keyboard-shirt.png" data-title="Working Class Hero — футболка"><img src="./assets/user-art/keyboard-shirt.png" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--vinyl" style="--x:2%;--y:34%;--w:17%;--h:25%;--r:-8deg;--z:9" data-poster="./assets/user-art/sabu-vinyl.png" data-title="SABU — виниловая обложка"><img src="./assets/user-art/sabu-vinyl.png" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--opportunity" style="--x:3%;--y:5%;--w:12%;--h:28%;--r:5deg;--z:2" data-poster="./assets/user-art/opportunity.jpg" data-title="Opportunity — IDS"><img src="./assets/user-art/opportunity.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--glasses" style="--x:18%;--y:4%;--w:13%;--h:28%;--r:-6deg;--z:4" data-poster="./assets/user-art/glasses-ids.jpg" data-title="Glasses — IDS"><img src="./assets/user-art/glasses-ids.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--squid" style="--x:52%;--y:5%;--w:12%;--h:28%;--r:5deg;--z:3" data-poster="./assets/user-art/squid-game.jpg" data-title="IDS — Игра в кальмара"><img src="./assets/user-art/squid-game.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--social" style="--x:84%;--y:39%;--w:13%;--h:29%;--r:4deg;--z:4" data-poster="./assets/user-art/social-killed.jpg" data-title="Social Media Killed Romance"><img src="./assets/user-art/social-killed.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--summer" style="--x:34%;--y:38%;--w:12%;--h:28%;--r:-5deg;--z:3" data-poster="./assets/user-art/summer-2006.jpg" data-title="2006"><img src="./assets/user-art/summer-2006.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--error" style="--x:70%;--y:38%;--w:12%;--h:28%;--r:5deg;--z:3" data-poster="./assets/user-art/error-human.jpg" data-title="Error Human"><img src="./assets/user-art/error-human.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--starboy" style="--x:35%;--y:4%;--w:13%;--h:28%;--r:1deg;--z:2" data-poster="./assets/user-art/starboy.jpg" data-title="Starboy"><img src="./assets/user-art/starboy.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--horse" style="--x:19%;--y:38%;--w:13%;--h:28%;--r:-5deg;--z:2" data-poster="./assets/user-art/horse-dream.jpg" data-title="Between a Dream &amp; a Dream"><img src="./assets/user-art/horse-dream.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--absence" style="--x:2%;--y:70%;--w:14%;--h:27%;--r:-7deg;--z:2" data-poster="./assets/user-art/absence-lingers.jpg" data-title="Absence Lingers"><img src="./assets/user-art/absence-lingers.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--sabu-tour" style="--x:79%;--y:5%;--w:15%;--h:30%;--r:4deg;--z:2" data-poster="./assets/user-art/sabu-tour.jpg" data-title="SABU Tour 2026"><img src="./assets/user-art/sabu-tour.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--shirt-mockup poster-art--shirt-loading" style="--x:22%;--y:72%;--w:20%;--h:22%;--r:2deg;--z:3" data-poster="./assets/user-art/shirt-loading.jpg" data-title="SABU — Загрузка"><img src="./assets/user-art/shirt-loading.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--shirt-mockup poster-art--shirt-optimism" style="--x:47%;--y:72%;--w:20%;--h:22%;--r:-4deg;--z:3" data-poster="./assets/user-art/shirt-optimism.jpg" data-title="SABU — Смотрю в будущее"><img src="./assets/user-art/shirt-optimism.jpg" alt="" /></button>
+        <button class="poster-hotspot poster-art poster-art--shirt-mockup poster-art--shirt-slogan" style="--x:74%;--y:72%;--w:23%;--h:22%;--r:5deg;--z:3" data-poster="./assets/user-art/shirt-slogan.jpg" data-title="SABU — Учись, действуй, громче"><img src="./assets/user-art/shirt-slogan.jpg" alt="" /></button>
+      </div>
+      <div class="poster-hint"><span>HOVER — ПРИБЛИЗИТЬ</span><span>CLICK — ОТКРЫТЬ</span></div>
+    </section>
+
+    <section class="cases-slide slide" id="cases" aria-labelledby="cases-title">
+      <span class="decor decor-star decor-star--case-pink" aria-hidden="true">✦</span>
+      <span class="decor decor-star decor-star--case-purple" aria-hidden="true">✳</span>
+      <span class="decor decor-star decor-star--case-orange" aria-hidden="true">✷</span>
+      <div class="section-line"><span>05 / ПАПКИ ПРОЕКТОВ</span><span>ОТКРОЙ КЕЙС</span></div>
+      <h2 id="cases-title">MY <span>CASES</span></h2>
+      <div class="folder-grid">
+        <a class="folder-card folder-card--vinyl" href="#case-vinyl"><span class="folder-tab"></span><span class="folder-cover"><img src="./assets/folder-covers/vinyl-russia.svg" alt="" /></span><span class="folder-name">Vinyl russia</span></a>
+        <a class="folder-card folder-card--sabu" href="#case-sabu"><span class="folder-tab"></span><span class="folder-cover"><img src="./assets/folder-covers/sabu.svg" alt="" /></span><span class="folder-name">SABU</span></a>
+        <a class="folder-card folder-card--miravi" href="#case-miravi"><span class="folder-tab"></span><span class="folder-cover"><img src="./assets/folder-covers/miravi.svg" alt="" /></span><span class="folder-name">MIRAVI</span></a>
+      </div>
+      <div class="folder-rule"><span></span><span>НАЖМИ НА ПАПКУ И ЛИСТАЙ ДАЛЬШЕ</span></div>
+    </section>
+
+    <section class="case-slide case-rolf slide" id="case-rolf" aria-labelledby="rolf-title">
+      <div class="case-topline"><a class="case-back" href="#works"><span aria-hidden="true">←</span> НАЗАД К РАБОТАМ</a><span>REELS С МЕРОПРИЯТИЯ</span></div>
+      <h2 id="rolf-title">РОЛЬФ</h2>
+      <div class="rolf-layout">
+        <article class="rolf-copy"><span>REELS С МЕРОПРИЯТИЯ</span><p>Смонтировали Reels с мероприятия: презентация, крутые автомобили, симуляторы и много зрителей. В кадре — Эрик Давидыч, Варпач и Настя Туман. Получился динамичный ролик с атмосферой большого автоивента.</p></article>
+        <button class="rolf-video rolf-video--vertical" type="button" data-video="./assets/videos/vinyl-russia-mobile.mp4" data-title="РОЛЬФ — Reels с мероприятия" data-poster="./assets/thumbs/vinyl-russia-mobile.jpg"><img src="./assets/thumbs/vinyl-russia-mobile.jpg" alt="Вертикальный ролик с мероприятия РОЛЬФ" /><span class="play-mark">▶</span><span class="video-chip">PLAY / SOUND ON</span></button>
+      </div>
+      <div class="case-bottomline"><span>ПРЕЗЕНТАЦИЯ + REELS / 2026</span><a href="#case-vinyl">NEXT CASE →</a></div>
+    </section>
+
+    <section class="case-slide slide case-vinyl" id="case-vinyl" aria-labelledby="vinyl-title">
+      <div class="case-topline"><a class="case-back" href="#cases"><span aria-hidden="true">←</span> НАЗАД К КЕЙСАМ</a><span>VINYL RUSSIA</span></div>
+      <h2 id="vinyl-title">VINYL <span>RUSSIA</span></h2>
+      <div class="case-video-grid">
+        <article class="case-video-card case-video-card--reel">
+          <button class="case-video case-video--reel" type="button" data-video="./assets/videos/vinyl-russia-mobile.mp4" data-title="РОЛЬФ — Reels с мероприятия" aria-label="Воспроизвести Reels с мероприятия РОЛЬФ">
+            <img src="./assets/thumbs/vinyl-russia-mobile.jpg" alt="Вертикальный ролик с мероприятия РОЛЬФ" />
+            <span class="play-mark">▶</span><span class="video-chip">PLAY / SOUND ON</span>
+          </button>
+          <div class="case-video-copy"><span>REELS С МЕРОПРИЯТИЯ</span><p>Смонтировали Reels с мероприятия: презентация, крутые автомобили, симуляторы и много зрителей. В кадре — Эрик Давидыч, Варпач и Настя Туман. Получился динамичный ролик с атмосферой большого автоивента.</p></div>
+        </article>
+        <article class="case-video-card">
+          <button class="case-video" type="button" data-video="./assets/videos/rolf-event.mp4" data-title="РОЛЬФ — презентация дилерского центра" aria-label="Воспроизвести презентацию РОЛЬФ">
+            <img src="./assets/thumbs/rolf-event.jpg" alt="Автомобили на презентации РОЛЬФ" />
+            <span class="play-mark">▶</span><span class="video-chip">PLAY / SOUND ON</span>
+          </button>
+          <div class="case-video-copy"><span>ПРЕЗЕНТАЦИЯ В ГЛАВНОМ ДИЛЕРСКОМ ЦЕНТРЕ РОЛЬФА</span><p>Сделали презентацию для показа в дилерском центре РОЛЬФ в Москве: разработали коллажи и анимацию. Получилось ярко и стильно — заказчику очень понравилось.</p></div>
+        </article>
+      </div>
+      <div class="case-bottomline"><span>VINYL CULTURE / 2026</span><a href="#case-sabu">NEXT CASE →</a></div>
+      <span class="decor decor-star decor-star--vinyl" aria-hidden="true">✹</span>
+    </section>
+
+    <section class="case-slide slide case-sabu" id="case-sabu" aria-labelledby="sabu-title">
+      <div class="case-topline"><a class="case-back" href="#cases"><span aria-hidden="true">←</span> НАЗАД К КЕЙСАМ</a><span>SABU</span></div>
+      <h2 id="sabu-title">SABU</h2>
+      <p class="case-lead">Разработали дизайн обложки и оформление виниловой пластинки для SABU, а также создали динамичный motion-edit для её социальных сетей. Продумали визуальный стиль, анимацию и подачу контента, чтобы проект выглядел цельно и современно на всех площадках.</p>
+      <div class="sabu-layout">
+          <button class="sabu-poster" type="button" data-poster="./assets/user-art/sabu-tour.jpg" data-title="SABU Tour 2026"><img src="./assets/user-art/sabu-tour.jpg" alt="Постер SABU Tour 2026 из Figma" /><span class="zoom-cue">↗</span></button>
+        <button class="sabu-vinyl" type="button" data-poster="./assets/user-art/sabu-vinyl.png" data-title="SABU — виниловая обложка"><img src="./assets/user-art/sabu-vinyl.png" alt="Виниловая обложка проекта SABU" /><span class="zoom-cue">↗</span></button>
+        <button class="sabu-video" type="button" data-video="./assets/videos/sabu-prod.mp4" data-title="SABU — motion edit" data-poster="./assets/thumbs/sabu-prod.jpg"><img src="./assets/thumbs/sabu-prod.jpg" alt="Кадр видео SABU" /><span class="play-mark">▶</span><span class="video-chip">PLAY / SOUND ON</span></button>
+        <div class="sabu-note"><span>ARTWORK + MOTION</span><p>Обложка · виниловая пластинка · motion-edit</p><a href="#case-miravi">NEXT CASE →</a></div>
+      </div>
+      <span class="decor decor-star decor-star--sabu" aria-hidden="true">✦</span>
+    </section>
+
+    <section class="case-slide slide case-miravi" id="case-miravi" aria-labelledby="miravi-title">
+      <div class="case-topline"><a class="case-back" href="#cases"><span aria-hidden="true">←</span> НАЗАД К КЕЙСАМ</a><span>MIRAVI</span></div>
+      <h2 id="miravi-title">MIRAVI</h2>
+      <p class="case-lead">Сделали визуалы для экранов концерта MIRAVI: адаптировали контент под разные форматы экранов, подготовили монтажный лист и реализовали сложную анимацию. Работа была непростой, но на выходе получилось действительно эффектно.</p>
+      <div class="miravi-grid">
+        <button type="button" data-video="./assets/videos/miravi-01.mp4" data-title="MIRAVI — live 01" data-poster="./assets/thumbs/miravi-01.jpg"><img src="./assets/thumbs/miravi-01.jpg" alt="MIRAVI — сцена с цветочными экранами" /><span class="play-mark">▶</span><small>LIVE 01</small></button>
+        <button type="button" data-video="./assets/videos/miravi-02.mp4" data-title="MIRAVI — live 02" data-poster="./assets/thumbs/miravi-02.jpg"><img src="./assets/thumbs/miravi-02.jpg" alt="MIRAVI — выступление на сцене" /><span class="play-mark">▶</span><small>LIVE 02</small></button>
+        <button type="button" data-video="./assets/videos/miravi-03.mp4" data-title="MIRAVI — live 03" data-poster="./assets/thumbs/miravi-03.jpg"><img src="./assets/thumbs/miravi-03.jpg" alt="MIRAVI — концертная съёмка" /><span class="play-mark">▶</span><small>LIVE 03</small></button>
+      </div>
+      <div class="case-bottomline"><span>LIVE VISUALS / 2026</span><a href="#contact">LET'S TALK →</a></div>
+      <span class="decor decor-star decor-star--miravi" aria-hidden="true">✹</span>
+    </section>
+
+    <section class="contact-slide slide" id="contact" aria-labelledby="contact-title">
+      <div class="section-line"><span>06 / СВЯЗЬ</span><span>ЕСТЬ ИДЕЯ? ДАВАЙ ОБСУДИМ</span></div>
+      <div class="contact-wrap">
+        <span class="contact-star contact-star--pink" aria-hidden="true">✳</span>
+        <span class="contact-star contact-star--purple" aria-hidden="true">✷</span>
+        <article class="contact-paper">
+          <div class="paper-top"><span>PORTFOLIO / 2026</span><span>OPEN FOR PROJECTS</span></div>
+          <h2 id="contact-title"><b>100+</b><span>выполненных<br />проектов</span></h2>
+          <div class="service-line"><span>МОНТАЖ</span><i>✳</i><span>ДИЗАЙН</span><i>✳</i><span>MOTION</span></div>
+          <div class="contact-divider"></div>
+          <p>КОНТАКТЫ ДЛЯ СВЯЗИ</p>
+          <a class="contact-link" href="https://t.me/N1kuTAaa" target="_blank" rel="noreferrer"><span>TELEGRAM</span><b>@N1kuTAaa</b><i>↗</i></a>
+          <a class="contact-link" href="https://www.instagram.com/insta.des.stor?dlrf=bThkcGNuN3ExZTFs&amp;utm_source=qr" target="_blank" rel="noreferrer"><span>INSTAGRAM</span><b>@insta.des.stor</b><i>↗</i></a>
+          <button class="contact-link copy-button" type="button" data-copy="nf2259770@gmail.com"><span>EMAIL</span><b>nf2259770@gmail.com</b><i>⧉</i></button>
+          <div class="paper-bottom"><span>ПИШИ — ОТВЕЧУ</span><span>✦</span><span>RU / EN</span></div>
+        </article>
+        <div class="contact-sticker" aria-hidden="true"><span>LET'S<br />MAKE<br />IT MOVE</span><i>↗</i></div>
+      </div>
+      <p class="copy-status" role="status" aria-live="polite"></p>
+      <div class="contact-footer"><a href="mailto:nf2259770@gmail.com">НАПИШИ МНЕ <span>↗</span></a><span>© 2026 NIKITA / VISUAL DESIGNER</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-logo" href="#top">PORT<span>folio</span></a><a href="#top">ВВЕРХ ↑</a></footer>
+
+  <dialog class="media-dialog" aria-label="Видеоплеер">
+    <button class="modal-close" type="button" aria-label="Закрыть видео">×</button>
+    <p class="modal-title"></p>
+    <video class="modal-video" controls playsinline preload="auto"></video>
+  </dialog>
+  <dialog class="poster-dialog" aria-label="Просмотр постера">
+    <button class="modal-close poster-close" type="button" aria-label="Закрыть постер">×</button>
+    <p class="modal-title poster-modal-title"></p>
+    <img class="poster-modal-image" alt="" />
+  </dialog>
+</body>
+</html>
+
