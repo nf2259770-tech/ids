@@ -124,25 +124,30 @@ carousel?.addEventListener('keydown', (event) => {
 const mediaDialog = document.querySelector('.media-dialog');
 const modalVideo = document.querySelector('.modal-video');
 const mediaTitle = mediaDialog?.querySelector('.modal-title');
+let activeVideoUrl = '';
 const closeMediaDialog = () => {
   if (!modalVideo) return;
   modalVideo.pause();
-  modalVideo.autoplay = false;
+  modalVideo.removeAttribute('autoplay');
   modalVideo.removeAttribute('src');
   modalVideo.removeAttribute('poster');
+  activeVideoUrl = '';
   modalVideo.load();
 };
 document.querySelectorAll('[data-video]').forEach((trigger) => {
   trigger.addEventListener('click', () => {
     if (!mediaDialog || !modalVideo) return;
+    const videoUrl = trigger.dataset.video;
+    if (!videoUrl || (mediaDialog.open && activeVideoUrl === videoUrl)) return;
+    if (mediaDialog.open) mediaDialog.close();
     modalVideo.pause();
+    modalVideo.removeAttribute('autoplay');
     modalVideo.removeAttribute('poster');
-    modalVideo.autoplay = true;
     modalVideo.preload = 'auto';
-    modalVideo.src = trigger.dataset.video;
+    modalVideo.src = videoUrl;
+    activeVideoUrl = videoUrl;
     if (mediaTitle) mediaTitle.textContent = trigger.dataset.title || 'Видео';
     mediaDialog.showModal();
-    modalVideo.load();
     const playAttempt = modalVideo.play();
     if (playAttempt && typeof playAttempt.catch === 'function') playAttempt.catch(() => {});
   });
