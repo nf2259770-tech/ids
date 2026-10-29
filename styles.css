@@ -384,4 +384,5 @@ dialog::backdrop{backdrop-filter:none;-webkit-backdrop-filter:none}
   body.case-open .case-slide.is-open .case-bottomline{display:flex;position:relative;margin-top:18px;padding-top:13px;visibility:visible;opacity:1}
   body.case-open .case-slide.is-open .decor-star{position:absolute;z-index:0;pointer-events:none;animation:none}
 }
+.case-lead::before{content:none!important;display:none!important}
 
