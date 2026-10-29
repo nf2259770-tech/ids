@@ -15,6 +15,12 @@ const syncCaseSlide = () => {
   const activeCase = caseSlides.find((slide) => slide.id === routeId);
   caseSlides.forEach((slide) => slide.classList.toggle('is-open', slide === activeCase));
   document.body.classList.toggle('case-open', Boolean(activeCase));
+  if (activeCase && window.matchMedia('(max-width: 640px)').matches) {
+    // On iPhone Safari, fixed + transformed case panels can paint only their
+    // controls while dropping normal-flow text and image layers. Mobile cases
+    // are rendered in document flow instead; move to their start after layout.
+    requestAnimationFrame(() => window.scrollTo(0, 0));
+  }
   if (!activeCase && previousOpen && (routeId === 'cases' || routeId === 'works')) {
     document.getElementById(routeId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }

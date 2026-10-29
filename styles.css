@@ -306,3 +306,82 @@ dialog::backdrop{backdrop-filter:none;-webkit-backdrop-filter:none}
   .decor-star--vinyl,.decor-star--sabu,.decor-star--miravi{top:calc(env(safe-area-inset-top,0px) + 72px);right:5%;bottom:auto;width:22px}
 }
 
+/* iPhone Safari: render case pages as ordinary document content. Safari can
+   omit descendants of fixed, transformed panels during compositing. */
+@media(max-width:640px){
+  body:not(.case-open) .case-slide{display:none!important}
+  body.case-open{overflow-x:hidden;overflow-y:auto}
+  body.case-open .site-header,
+  body.case-open .scroll-progress,
+  body.case-open main>.slide:not(.case-slide),
+  body.case-open .site-footer,
+  body.case-open main>.case-slide:not(.is-open){display:none!important}
+  body.case-open main>.case-slide.is-open{
+    position:relative!important;inset:auto!important;z-index:auto!important;
+    display:flex!important;flex-direction:column;justify-content:flex-start;
+    width:100%;min-width:0;min-height:100svh;height:auto;max-height:none;
+    margin:0;overflow:visible;overscroll-behavior:auto;
+    visibility:visible!important;opacity:1!important;pointer-events:auto;
+    transform:none!important;transition:none!important;isolation:auto;
+    padding:calc(env(safe-area-inset-top,0px) + 12px) var(--edge) calc(28px + env(safe-area-inset-bottom,0px));
+    background:#0c0c0c!important;
+  }
+  body.case-open .case-slide.is-open h2,
+  body.case-open .case-slide.is-open .case-summary-label,
+  body.case-open .case-slide.is-open .case-lead,
+  body.case-open .case-slide.is-open .rolf-copy,
+  body.case-open .case-slide.is-open .case-video-copy,
+  body.case-open .case-slide.is-open .sabu-note{
+    display:block!important;position:relative;visibility:visible!important;
+    opacity:1!important;transform:none!important;color:#f0eeeb!important;
+    -webkit-text-fill-color:currentColor;
+  }
+  body.case-open .case-slide.is-open h2{font-family:var(--display);font-size:clamp(42px,11vw,66px);line-height:.98;padding:20px 0 9px}
+  body.case-open .case-slide.is-open .case-summary-label{margin:7px 0;color:var(--yellow)!important;font:600 10px/1.35 var(--caps);letter-spacing:.12em}
+  body.case-open .case-slide.is-open .case-lead{max-width:none;margin:0 0 15px;font-family:var(--body);font-size:14px;line-height:1.55}
+  body.case-open .case-slide.is-open .case-lead::before{content:none!important;display:none!important}
+  body.case-open .case-slide.is-open .case-topline{position:sticky;top:0;z-index:12;display:grid;grid-template-columns:max-content minmax(0,1fr);align-items:center;gap:8px;margin:0 0 4px;padding:6px 0 10px;background:#0c0c0c;border-bottom:1px solid #ffffff34;backdrop-filter:none;-webkit-backdrop-filter:none}
+  body.case-open .case-slide.is-open .case-video-grid{display:flex;flex-direction:column;gap:15px;width:100%;max-width:none;margin:14px 0 18px}
+  body.case-open .case-slide.is-open .case-video-card{display:block;width:100%;min-width:0;padding:9px}
+  body.case-open .case-slide.is-open .case-video,
+  body.case-open .case-slide.is-open .rolf-video,
+  body.case-open .case-slide.is-open .sabu-video,
+  body.case-open .case-slide.is-open .miravi-grid button{
+    position:relative;display:block;width:100%;height:clamp(190px,58vw,270px);
+    min-height:190px;max-height:none;aspect-ratio:auto;overflow:hidden;
+    padding:0;background:#171716;border-radius:4px;transform:none!important;
+  }
+  body.case-open .case-slide.is-open .case-video>img,
+  body.case-open .case-slide.is-open .rolf-video>img,
+  body.case-open .case-slide.is-open .sabu-video>img,
+  body.case-open .case-slide.is-open .miravi-grid button>img{
+    position:absolute;inset:0;display:block;width:100%;height:100%;
+    min-width:100%;min-height:100%;object-fit:cover;object-position:center;
+    visibility:visible!important;opacity:1!important;transform:none!important;
+    filter:none!important;mix-blend-mode:normal;
+  }
+  body.case-open .case-slide.is-open .case-video--reel>img{object-fit:contain;background:#10100f}
+  body.case-open .case-slide.is-open .play-mark{left:50%;top:50%;z-index:3;backdrop-filter:none;-webkit-backdrop-filter:none}
+  body.case-open .case-slide.is-open .video-chip{display:inline-block;z-index:4}
+  body.case-open .case-slide.is-open .case-video-copy{padding:11px 2px 4px}
+  body.case-open .case-slide.is-open .case-video-copy>span{display:block;color:var(--yellow)!important;font:600 10px/1.4 var(--caps);letter-spacing:.1em}
+  body.case-open .case-slide.is-open .case-video-copy p,
+  body.case-open .case-slide.is-open .rolf-copy p,
+  body.case-open .case-slide.is-open .sabu-note p{display:block;margin:7px 0 0;color:#f0eeeb!important;font-family:var(--body);font-size:14px;line-height:1.55;-webkit-text-fill-color:#f0eeeb}
+  body.case-open .case-rolf.is-open .rolf-layout{display:flex;flex-direction:column;align-items:stretch;gap:15px;width:100%;margin:0}
+  body.case-open .case-rolf.is-open .rolf-copy{order:0;max-width:none}
+  body.case-open .case-rolf.is-open .rolf-video--vertical{order:1;width:min(72vw,280px);height:min(132vw,470px);min-height:300px;max-height:none;aspect-ratio:auto;align-self:center}
+  body.case-open .case-sabu.is-open .sabu-layout{display:grid;grid-template-columns:1fr 1fr;gap:11px;width:100%;margin:12px 0}
+  body.case-open .case-sabu.is-open .sabu-poster,
+  body.case-open .case-sabu.is-open .sabu-vinyl{position:relative;display:block;width:100%;height:clamp(210px,65vw,290px);max-height:none;aspect-ratio:auto;overflow:hidden}
+  body.case-open .case-sabu.is-open .sabu-poster>img,
+  body.case-open .case-sabu.is-open .sabu-vinyl>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+  body.case-open .case-sabu.is-open .sabu-video{grid-column:1/-1;height:clamp(210px,58vw,280px)}
+  body.case-open .case-sabu.is-open .sabu-note{grid-column:1/-1;padding:5px 0}
+  body.case-open .case-miravi.is-open .miravi-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:14px 0;width:100%}
+  body.case-open .case-miravi.is-open .miravi-grid button{height:clamp(205px,64vw,290px);aspect-ratio:auto}
+  body.case-open .case-miravi.is-open .miravi-grid button:last-child{grid-column:1/-1;height:clamp(225px,66vw,300px)}
+  body.case-open .case-slide.is-open .case-bottomline{display:flex;position:relative;margin-top:18px;padding-top:13px;visibility:visible;opacity:1}
+  body.case-open .case-slide.is-open .decor-star{position:absolute;z-index:0;pointer-events:none;animation:none}
+}
+
